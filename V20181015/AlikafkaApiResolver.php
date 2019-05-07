@@ -8,6 +8,8 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
+ * @method GetTopicsByConsumerId getTopicsByConsumerId(array $options = [])
+ * @method CheckQueueNum checkQueueNum(array $options = [])
  * @method SendMsg sendMsg(array $options = [])
  * @method AddPartitions addPartitions(array $options = [])
  * @method AddTopicWithPartition addTopicWithPartition(array $options = [])
@@ -43,6 +45,24 @@ class V20181015Rpc extends Rpc
 
     /** @var string */
     public $serviceCode = 'alikafka';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getConsumerId()
+ * @method $this withConsumerId($value)
+ */
+class GetTopicsByConsumerId extends V20181015Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class CheckQueueNum extends V20181015Rpc
+{
 }
 
 /**
